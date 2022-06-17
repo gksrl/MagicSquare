@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MagicSquare
@@ -47,18 +41,15 @@ namespace MagicSquare
 
             else
             {
-                for (int i = 0; i < num1; i++) // 입력 받은 수 만큼 열 생성
+                for (int i = 1; i <= num1; i++) // 입력 받은 수 만큼 열 생성
                 {
                     dt.Columns.Add($"{i}", typeof(string));
-
-
-                    for (int j = 0; j < i-4; j++) // 입력 받은 수 만큼의 행 생성
-                    {
-                        dt.Rows.Add();
-
-                    }
                 }
-                
+                for (int j = 1; j <= num1-1; j++) // 입력 받은 수 만큼의 행 생성
+                {
+                    dt.Rows.Add();
+                }
+
 
 
             }
